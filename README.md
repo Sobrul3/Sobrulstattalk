@@ -3,7 +3,7 @@ Hi! I am Sobrul Islam, a student of the Statistics Department at Jagannath Unive
 
 ## SPSS & STATA Data
 - Here all are available for Practicing SPSS and STATA.
-- [Atique Sir] ()
+- [Atique Sir] ([docs/Atique Sir](https://github.com/Sobrul3/Sobrulstattalk/tree/4c704b5bdfd047b439be52aafa6f65f197d13e3f/docs/Atique%20Sir))
 - [Giash Sir] ()
 - [Sobrul's] ()
 ### YouTube
