@@ -2,4 +2,7 @@
 # Statistics
 Welcome to the Statistics Section.
 ## SPSS Data
--[Download]() {:download}
+<ul>
+  <a href="/assets/Atique Sir">Download</a>
+</ul>
+
