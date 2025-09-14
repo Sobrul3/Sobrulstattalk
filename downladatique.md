@@ -1,3 +1,4 @@
+## Dr. Md. Atiqul Islam
 - <a href="assets/Atique Sir/Body-Temperature.sav" download> Body Temperature.sav </a>
 - <a href="assets/Atique Sir/Exercise_data.sav" download> Exercise data.sav </a>
 - <a href="assets/Atique Sir/Hypertension.sav" download> Hypertension.sav </a>
@@ -15,3 +16,9 @@
 - <a href="assets/Atique Sir/faminc.sav" download> faminc.sav </a>
 - <a href="assets/Atique Sir/kids.sav" download> kids.sav </a>
 
+
+
+###### Hi, I am Sobrul's Stat Talk. Follow me for notes, educational videos, and helpful learning guides. You can visits for Notes and Videos.
+  - <a href="https://www.youtube.com/@sobrulstattalk"> Youtube </a>
+  - <a href="https://t.me/sobrulstattalk"> Telegram </a>
+  - <a href="https://www.facebook.com/SobrulStatTalk"> Facebook </a>
