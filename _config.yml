@@ -3,3 +3,8 @@ logo: docs/assets/Mohammad sobrul 3.0 Youtube Banner Art.jpg
 description: Statistics Lover | Statistics Learner
 #show_downloads: false
 theme: jekyll-theme-minimal
+nav:
+  - title: Home
+    url: /
+  - title: Downloads
+    url: /statistics/
