@@ -3,11 +3,11 @@ Hi! I am Sobrul Islam, a student of the Statistics Department at Jagannath Unive
 
 ## SPSS & STATA Data
 - Here all are available for Practicing SPSS and STATA.
-- [Data](https://drive.google.com/drive/folders/1wKycxCiggoF0HgIFB-4BsUvtdr7AHDcZ?usp=sharing)
+- [Download Data](https://drive.google.com/drive/folders/1wKycxCiggoF0HgIFB-4BsUvtdr7AHDcZ?usp=sharing)
 
 ### YouTube
 - Description
-- [YouTube](https://www.youtube.com/@sobrulstattalk)
+-[YouTube](https://www.youtube.com/@sobrulstattalk)
 
 ### Facebook
 - Description
