@@ -4,7 +4,9 @@ Hi! I am Sobrul Islam, a student of the Statistics Department at Jagannath Unive
 ## SPSS & STATA Data
 - Here all are available for Practicing SPSS and STATA.
 - [Download Data](https://drive.google.com/drive/folders/1wKycxCiggoF0HgIFB-4BsUvtdr7AHDcZ?usp=sharing)
-- <a href="assets/Atique Sir/Body-Temperature.sav" download> ssss </a>
+##### SPSS
+[Atique]
+  <a href="assets/Atique Sir/Body-Temperature.sav" download> ssss </a>
 
 ### YouTube
 - Description
