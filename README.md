@@ -18,6 +18,9 @@ Here all are available for Practicing SPSS and STATA.
 - [Giash Sir](downladagiash.md)
 - [Sobrul](downladsobrul.md)
 
+## R Code of 7th Semester Lab
+- [R Code](Rcode.md)
+
 
 ### YouTube
 Learn statistics the easy way! On Sobrul's Stat Talk, you’ll find notes, video lessons, tips, and tricks to make studying simple and fun. You can visits to my YouTube channel [Sobrul's Stat Talk](https://www.youtube.com/@sobrulstattalk)
