@@ -27,24 +27,43 @@
         }
         
         header {
-            background: linear-gradient(to right, #2ecc71, #2ecc71 25%, #e74c3c 50%, #2ecc71 75%, #2ecc71);
+            background: #2ecc71; /* Solid green background */
             color: white;
             padding: 1.5rem 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background: #e74c3c;
+            border-radius: 50%;
+            z-index: 0;
         }
         
-        .header-content {
+       .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
-        
-        .logo {
+
+       .logo {
             font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
             font-weight: 700;
             display: flex;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
         
         .logo i {
@@ -300,7 +319,7 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background: #2c3e50;
+            background: #cd5384;
             color: white;
             border-radius: 50%;
             text-decoration: none;
@@ -309,7 +328,7 @@
         
         .social-icons a:hover {
             transform: translateY(-3px);
-            background: #e74c3c;
+            background: #4650dd;
         }
         
         footer {
@@ -458,8 +477,8 @@
                 
                 <div class="header-right">
                     <ul class="nav-links">
-                        <li><a href="#" class="active"> Home </a></li>
-                        <li><a href="#"> Statistics JnU </a></li>
+                        <li><a href="https://sobrul3.github.io/sobrulstattalk/" class="active"> Home </a></li>
+                        <li><a href="my_statistics.html"> Statistics JnU </a></li>
                         <li><a href="https://sobrul3.github.io/stat/"> My Statistics </a></li>
                         <li><a href="#"> About </a></li>
                     </ul>
@@ -477,7 +496,7 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>Welcome to Sobrul's Stat Talk</h1>
-                <p>Explore my daily works, class lectures, notes, and video lectures as I navigate through the fascinating world of statistics at JnU.</p>
+                <p>Statistics is a fundamental discipline that underpins research, decision-making, and problem-solving across diverse fields, making it essential for both scientific advancement and practical applications.This platform provides access to my regular work in statistics, including class lectures, notes, and video tutorials, which are presented in a simplified and accessible manner for easier understanding.</p>
                 <a href="https://sobrul3.github.io/stat/" class="btn">Explore My Resources</a>
                 
             </div>
@@ -488,18 +507,19 @@
                 <div class="latest-post">
                     <div class="post-header">
                         <h2 class="post-title">Latest Post</h2>
-                        <div class="post-date">April 15, 2023</div>
+                        <div class="post-date">September 26, 2025</div>
                     </div>
                     <div class="post-content">
                         <div class="post-text">
-                            <p>This week we've been exploring the fundamentals of probability theory. I've compiled comprehensive notes from Dr. Rahman's lectures along with some practical examples.</p>
+                            <p style="color: purple;">In the last week, we learned about SPSS, including how to set up a regression model and interpret the results. We also studied how an outlier can affect the entire regression model and the methods for identifying and removing it.</p>
                             <p><b>Key topics Covered :-</b></p>
-                            <ul style="list-style-type: none;">
-                                <li>Basic probability rules and axioms</li>
-                                <li>Conditional probability and Bayes' Theorem</li>
-                                <li>Discrete and continuous random variables</li>
-                                <li>Important probability distributions</li>
+                            <ul style="list-style-type: square; padding-left: 20px;">
+                                <li>Fitting Regression Model</li>
+                                <li>Setting Regression Line</li>
+                                <li>Interpret the Results</li>
+                                <li>Outlier Detection and Removing</li>
                             </ul>
+                        <a href="#" style="text-decoration: none;"><p style="font-size: 18px; color: orange;"> Read in Details </p></a>
                         </div>
                         <div class="post-image">
                                 <img src="https://tse4.mm.bing.net/th/id/OIP.k50yahhL3lobWBfMQxkAUAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" width="350" height="350">
@@ -547,28 +567,28 @@
             <div class="sidebar">
                 <div class="sidebar-widget">
                     <h3 class="widget-title">Recent Resources</h3>
-                    <ul class="resources-list" style="list-style-type: disclosure-closed;">
-                        <li><a href="#">Probability Lecture Notes (PDF)</a></li>
-                        <li><a href="#">Statistical Inference Video</a></li>
-                        <li><a href="#">Regression Analysis Examples</a></li>
-                        <li><a href="#">Exam Preparation Guide</a></li>
-                        <li><a href="#">R Programming Cheat Sheet</a></li>
-                        <li><a href="#">R Programming Cheat Sheet</a></li>
-                        <li><a href="#">R Programming Cheat Sheet</a></li>
-                        <li><a href="#">R Programming Cheat Sheet</a></li>
-                        <li><a href="#">R Programming Cheat Sheet</a></li>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 20px; line-height: 2; font-size: 18px; color: orange;">
+                        <li><a href="#" style="text-decoration: none;">Probability Lecture Notes (PDF)</a></li>
+                        <li><a href="#" style="text-decoration: none;">Statistical Inference Video</a></li>
+                        <li><a href="#" style="text-decoration: none;">Regression Analysis Examples</a></li>
+                        <li><a href="#" style="text-decoration: none;">Exam Preparation Guide</a></li>
+                        <li><a href="#" style="text-decoration: none;">R Programming Cheat Sheet</a></li>
+                        <li><a href="#" style="text-decoration: none;">R Programming Cheat Sheet</a></li>
+                        <li><a href="#" style="text-decoration: none;">R Programming Cheat Sheet</a></li>
+                        <li><a href="#" style="text-decoration: none;">R Programming Cheat Sheet</a></li>
+                        <li><a href="#" style="text-decoration: none;">R Programming Cheat Sheet</a></li>
                     </ul>
                 </div>
                 
                 <div class="sidebar-widget">
                     <h3 class="widget-title">Upcoming Topics</h3>
-                    <ul class="resources-list"  style="list-style-type: disclosure-closed;">
-                        <li><a href="#">Probability Theory - April 20</a></li>
-                        <li><a href="#">Statistical Inference - May 5</a></li>
-                        <li><a href="#">Regression Analysis - May 15</a></li>
-                        <li><a href="#">Regression Analysis - May 15</a></li>
-                        <li><a href="#">Regression Analysis - May 15</a></li>
-                        <li><a href="#">Regression Analysis - May 15</a></li>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 20px; line-height: 2; font-size: 18px; color: blue;">
+                        <li><a href="#" style="text-decoration: none;">Probability Theory - April 20</a></li>
+                        <li><a href="#" style="text-decoration: none;">Statistical Inference - May 5</a></li>
+                        <li><a href="#" style="text-decoration: none;">Regression Analysis - May 15</a></li>
+                        <li><a href="#" style="text-decoration: none;">Regression Analysis - May 15</a></li>
+                        <li><a href="#" style="text-decoration: none;">Regression Analysis - May 15</a></li>
+                        <li><a href="#" style="text-decoration: none;">Regression Analysis - May 15</a></li>
                     </ul>
                 </div>
                 
