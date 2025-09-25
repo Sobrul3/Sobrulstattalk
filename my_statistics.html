@@ -225,19 +225,31 @@
         .footer-content {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
             margin-bottom: 1.5rem;
+            gap: 1rem;
         }
         
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin-bottom: 1rem;
+        .footer-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
         
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            font-family: 'Montserrat', sans-serif;
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #e74c3c;
+        }
+        
+        .footer-contact {
+            text-align: right;
         }
         
         .copyright {
@@ -246,24 +258,88 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
+        /* Remove dots for disclosure-closed lists */
+        ul[style*="disclosure-closed"] li:before {
+            content: none !important;
+        }
+
+        /* Mobile Responsive Fixes */
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
             .header-content {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+                justify-content: center;
             }
             
             .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-direction: column;
+                gap: 0.8rem;
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                text-align: center;
+                padding: 12px;
+            }
+            
+            .intro, .courses, .resources, .social-platforms, footer {
+                padding: 1.5rem;
             }
             
             table {
                 display: block;
                 overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            th, td {
+                padding: 10px;
+                font-size: 0.9rem;
             }
             
             .footer-content {
                 flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-contact {
+                text-align: center;
+            }
+            
+            /* Adjust header circle for mobile */
+            header::before {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .intro h2, .courses h2, .resources h2, .social-platforms h2 {
+                font-size: 1.3rem;
+            }
+            
+            .intro, .courses, .resources, .social-platforms, footer {
+                padding: 1rem;
             }
         }
     </style>
@@ -380,15 +456,16 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                    <a href="https://sobrul3.github.io/sobrulstattalk/">Home</a>
-                    <a href="https://t.me/sobrulstattalk">Lecture Notes</a>
-                    <a href="https://www.youtube.com/@sobrulstattalk">Video Lectures</a>
-                <div class="footer-contact">
-                    <p style="color: orange;">Email: sobrulss@gmail.com</p>
-                </div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://sobrul3.github.io/sobrulstattalk/">Home</a>
+                <a href="https://t.me/sobrulstattalk">Lecture Notes</a>
+                <a href="https://www.youtube.com/@sobrulstattalk">Video Lectures</a>
             </div>
+            <div class="footer-contact">
+                <p style="color: orange;">Email: sobrulss@gmail.com</p>
+            </div>
+        </div>
         <div class="copyright">
             <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved.</p>
         </div>
