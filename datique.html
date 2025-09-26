@@ -18,9 +18,6 @@
             line-height: 1.6;
             color: #766161;
             background: #f8f9fa;
-            width: 100%;
-            margin: 0;
-            padding: 0;
         }
         
         .content-wrapper {
@@ -34,7 +31,6 @@
             color: white;
             padding: 3rem 2rem;
             text-align: center;
-            width: 100%;
         }
         
         .logo {
@@ -42,12 +38,6 @@
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
-        }
-        
-        .header-subtitle {
-            font-size: 1.5rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
         }
         
         .nav-links {
@@ -77,7 +67,6 @@
             padding: 3rem 2rem;
             text-align: center;
             border-bottom: 1px solid #eee;
-            width: 100%;
         }
         
         .profile-section h2 {
@@ -93,11 +82,11 @@
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.7;
+            text-align: justify;
         }
         
         .resources-section {
             padding: 2rem;
-            width: 100%;
         }
         
         .resources-section h2 {
@@ -110,27 +99,25 @@
         
         .download-table {
             width: 100%;
-            margin: 0 auto 1rem;
             border-collapse: collapse;
             margin-bottom: 1.5rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border-radius: 0;
-            overflow: hidden;
+            table-layout: fixed;
         }
         
+        .download-table th, 
+        .download-table td {
+            padding: 14px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            word-wrap: break-word;
+        }
+
         .download-table th {
             background-color: #4fcf5e;
             color: white;
             font-weight: 600;
-            padding: 14px;
-            text-align: center;
             font-size: 1rem;
-        }
-        
-        .download-table td {
-            padding: 12px 14px;
-            border-bottom: 1px solid #ddd;
-            text-align: center;
         }
         
         .download-table tr:hover {
@@ -138,8 +125,8 @@
         }
         
         .download-btn {
-            background: #df5a8fb0;
-            color: white;
+            background: #eed1dcb0;
+            color: rgb(63, 58, 58);
             border: none;
             padding: 8px 16px;
             border-radius: 4px;
@@ -151,7 +138,7 @@
         }
         
         .download-btn:hover {
-            background: #2980b9;
+            background: #f0a0d8;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -161,7 +148,6 @@
             color: white;
             padding: 2rem;
             text-align: center;
-            width: 100%;
         }
         
         .footer-content {
@@ -171,7 +157,6 @@
             flex-wrap: wrap;
             margin-bottom: 1.5rem;
             gap: 1rem;
-            text-align: center;
         }
         
         .footer-links {
@@ -179,6 +164,7 @@
             list-style: none;
             gap: 2rem;
             flex-wrap: wrap;
+            justify-content: center;
         }
         
         .footer-links a {
@@ -222,25 +208,21 @@
             .footer-contact {
                 text-align: center;
             }
-            
-            .download-table {
-                display: block;
-                font-size: 0.9rem;
-            }
+
             .download-table th,
             .download-table td {
-                padding: 8px 6px;
-    }
+                padding: 10px 8px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="content-wrapper">
         <header>
-            <div class="logo">Sobrul's Stat Talk</div>
+            <div class="logo"><h6 style="color: #fe0202; -webkit-text-stroke: 0.5px rgb(2, 255, 251);">Sobrul's Stat Talk</h5>Statistics JnU</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="statistics_jnu.html">Statistics JnU</a></li>
                 <li><a href="https://sobrul3.github.io/stat/">My Statistics</a></li>
                 <li><a href="about_me.html">About</a></li>
             </ul>
@@ -333,7 +315,7 @@
                         <td>Sample_Dataset_2014.sav</td>
                         <td><a href="assets/Atique Sir/Sample_Dataset_2014.sav" download class="download-btn">Download</a></td>
                     </tr>
-                </tbody>
+                    </tbody>
             </table>
         </section>
 
@@ -344,8 +326,8 @@
                     <a href="statistics_jnu.html">My Statistics</a>
                 </div>
                 <div class="footer-contact">
-                    <p style="color: orange;">Email: sobrulss@gmail.com</p>
-                </div>
+<p>For any queries : <a href="mailto:sobrulss@gmail.com" style="color: orange; text-decoration: none;">
+    sobrulss@gmail.com</a></p>                </div>
             </div>
             <div class="copyright">
                 <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved.</p>
