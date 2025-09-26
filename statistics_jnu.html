@@ -88,163 +88,24 @@
             background: rgba(255, 255, 255, 0.1);
         }
         
-        .about-me {
+        .intro {
             background: white;
-            padding: 3rem 2rem;
+            padding: 2rem;
             border-radius: 10px;
             margin-bottom: 2rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
         
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-        
-        .personal-info h3 {
+        .intro h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
             font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
         }
         
-        .tagline {
-            color: #e74c3c;
-            font-size: 1.2rem;
-            font-weight: 600;
+        .intro p {
             margin-bottom: 1rem;
-            line-height: 1.4; /* Fixed line-height */
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* Three columns for full width */
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .info-item {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            height: 100%;
-        }
-        
-        .info-item i {
-            color: #3498db;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .info-item strong {
-            color: #2c3e50;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .bio p {
-            margin-bottom: 1rem;
-            line-height: 1.7;
-            color: #555;
+            line-height: 1.6;
             text-align: justify;
-        }
-        
-        .stats-section {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 2px solid #ecf0f1;
-        }
-        
-        .stats-section h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .about-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns for full width */
-            gap: 1rem;
-        }
-        
-        .stat-card {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        
-        .skills-section {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 2px solid #ecf0f1;
-        }
-        
-        .skills-section h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .skill-category {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-        }
-        
-        .skill-category h4 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .skill-category li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #ecf0f1;
-            color: #555;
-        }
-        
-        .skill-category li:last-child {
-            border-bottom: none;
         }
         
         .courses {
@@ -430,21 +291,8 @@
                 padding: 12px;
             }
             
-            .about-me, .courses, .resources, .social-platforms, footer {
+            .intro, .courses, .resources, .social-platforms, footer {
                 padding: 1.5rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-stats {
-                grid-template-columns: repeat(2, 1fr);
             }
             
             table {
@@ -484,24 +332,12 @@
                 font-size: 1.3rem;
             }
             
-            .about-me h2, .courses h2, .resources h2, .social-platforms h2 {
+            .intro h2, .courses h2, .resources h2, .social-platforms h2 {
                 font-size: 1.3rem;
             }
             
-            .about-me, .courses, .resources, .social-platforms, footer {
+            .intro, .courses, .resources, .social-platforms, footer {
                 padding: 1rem;
-            }
-            
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .info-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -509,133 +345,85 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">
+             <div class="logo">
                 <i class="fas fa-chart-bar"></i>
-                <span>Sobrul's Stat Talk</span>
-            </div>
+                <span>Sobrul's Stat Talk</span>  
+             </div>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="statistics_jnu.html">Statistics JnU</a></li>
                 <li><a href="https://sobrul3.github.io/stat/">My Statistics</a></li>
-                <li><h3 style="color: #89049b">About Me</h3></li>
+                <li><a href="about_me.html">About</a></li>
+                <li><h3 style="color: #89049b">Statistics JnU</h3></li>
             </ul>
         </div>
     </header>
 
-    <section class="about-me">
-        <h2 style="font-family: 'Times New Roman', serif; color: #be2f2f;"> This is </h2>
-        <div class="about-content">
-            <div class="about-text">
-                <div class="personal-info">
-                    <h3 style="font-family: 'Times New Roman', serif;">Soburul Islam</h3>
-                    <p class="tagline">Statistics Learner || Statistics Lover</p>
-                    
-                    <div class="bio">
-                        <p>Hi! I am Sobrul Islam, a student of the Statistics Department at Jagannath University, Dhaka, Bangladesh. I am from Natore, Rajshahi. I love statistics and want to teach it in a simple and easy way so everyone can understand. My goal is to help students learn statistics without fear and make it interesting and practical.</p>
-                        
-                        <p>My journey in statistics began with a curiosity about data and patterns. Now, I'm dedicated to sharing my knowledge through simple explanations, practical examples, and engaging content that makes statistics accessible to all.</p>
-                        
-                        <p>Through Sobrul's Stat Talk, I aim to create a community where students can learn, ask questions, and develop confidence in statistical analysis.</p>
-                    </div>
-                    
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <strong>Education</strong>
-                                <p>I started my primary education at 16th No. Brogaon Government High School, where I studied up to class five. After passing the final exam, I got admitted to Biash Batelian High School and completed both my JSC and SSC there. This was one of the happiest times of my life, full of good experiences and memories. Later, I studied at Singra Damdama Pilot High School and College, a well-known institution in that area, where I completed my HSC. Now, I am studying for a Bachelor of Science in Statistics at Jagannath University, Dhaka, with the aim of building a strong academic background and making a valuable contribution in the field of data and research.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Hometown</strong>
-                                <p>Singra-Natore, Rajshahi<br>Bangladesh</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class="fas fa-heart"></i>
-                            <div>
-                                <strong>Passion</strong>
-                                <p>Learning and Practicing Statistics<br>Making complex concepts into simple</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>    
-
-        <div class="stats-section">
-                <h3>My Statistics Journey</h3>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">3+</div>
-                        <div class="stat-label">Years of Study</div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Topics Covered</div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-number">16+</div>
-                        <div class="stat-label">Students Helped</div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Passion for Statistics</div>
-                    </div>
-                </div>
-        </div>   
-        <div class="skills-section">
-            <h3>Areas of Expertise</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Statistical Analysis</h4>
-                    <ul style="list-style-type: circle; padding-left: 20px;">
-                        <li>Probability Theory</li>
-                        <li>Time Series Analysis</li>
-                        <li>Hypothesis Testing</li>
-                        <li>Regression Analysis</li>
-                        <li>Multivariate Analysis</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Software Proficiency</h4>
-                    <ul style="list-style-type: circle; padding-left: 20px;">
-                        <li>Excel</li>
-                        <li>C++</li>
-                        <li>R Programming</li>
-                        <li>SPSS</li>
-                        <li>STATA</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <section class="intro">
+        <h2> Statistics is the Grammar of Science </h2>
+        <p>Statistics is the science of collecting, analyzing, interpreting, and presenting data. It helps us understand patterns, make predictions, and make informed decisions in everyday life and across various fields such as science, business, health, and technology. By using statistical methods, we can summarize large amounts of information, identify trends, and test hypotheses. In short, statistics is an essential tool for research, problem-solving, and decision-making.</p>
+<p>I am Sobrul Islam, a student of the Statistics Department at Jagannath University, Dhaka, Bangladesh. I am from Natore, Rajshahi. I love statistics and want to teach it in a simple and easy way so everyone can understand. My goal is to help students learn statistics without fear and make it interesting and practical.</p>
     </section>
 
-    <section class="social-platforms">
-        <h2>Connect With Me</h2>
+    <section class="courses">
+        <h2>Current Semester Courses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Notes</th>
+                    <th>Videos</th>
+                    <th>Practice</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Econometrics</td>
+                    <td><a href="https://t.me/sobrulstattalk">Telegram</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Bioinformatics</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Epidemiology</td>
+                    <td></td>
+                    <td><a href="https://www.youtube.com/@sobrulstattalk">YouTube</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Multivariate Analysis</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SPSS & STATA</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="https://www.facebook.com/SobrulStatTalk">Facebook</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="resources">
+        <h2>SPSS & STATA Data</h2>
+        <p>Here all are available for Practicing SPSS and STATA.</p>
+         <ul style="list-style-type: disclosure-closed; padding-left: 20px; font-size: 18px; color: orange; margin-top: 15px;">
+             <li><a href="datique.html" style="text-decoration: none;">Atique Sir</a></li>
+             <li><a href="dgiash.html" style="text-decoration: none;">Giash Sir</a></li>
+             <li><a href="dsobrul.html" style="text-decoration: none;">Sobrul</a></li>
+         </ul>
         
-        <div class="platform">
-            <h3>YouTube</h3>
-            <p>Learn statistics the easy way! On Sobrul's Stat Talk, you'll find notes, video lessons, tips, and tricks to make studying simple and fun. You can visit my YouTube channel: <a href="https://www.youtube.com/@sobrulstattalk">Sobrul's Stat Talk</a></p>
-        </div>
-        
-        <div class="platform">
-            <h3>Facebook</h3>
-            <p>Sobrul's Stat Talk is here to help you learn! Get notes, tutorials, and study guides that make studying easier and enjoyable. You can visit my Facebook page: <a href="https://www.facebook.com/SobrulStatTalk">Sobrul's Stat Talk</a></p>
-        </div>
-        
-        <div class="platform">
-            <h3>Telegram</h3>
-            <p>Join Sobrul's Stat Talk on Telegram! Get instant access to notes, study materials, and educational updates to make learning easier. You can visit my Telegram channel: <a href="https://t.me/sobrulstattalk">Sobrul's Stat Talk</a></p>
-        </div>
+        <h2>R Code of 7<sup>th</sup> Semester Lab</h2>
+        <ul style="list-style-type: disclosure-closed; padding-left: 20px; font-size: 18px; color: orange; margin-top: 15px;">
+             <li><a href="Rcode.html" style="text-decoration: none;">R Code</a></li>
+        </ul>
     </section>
 
     <footer>
@@ -646,12 +434,12 @@
                 <a href="https://www.youtube.com/@sobrulstattalk">Video Lectures</a>
             </div>
             <div class="footer-contact">
-               <p>For any queries : <a href="mailto:sobrulss@gmail.com" style="color: orange; text-decoration: none;">
+                <p>For any queries : <a href="mailto:sobrulss@gmail.com" style="color: orange; text-decoration: none;">
     sobrulss@gmail.com</a></p>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved.</p>
+            <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved</p>
         </div>
     </footer>
 </body>
