@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Md. Giash Uddin - Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #766161;
+            background: #f8f9fa;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(rgba(108, 181, 88, 0.9), rgba(219, 100, 197, 0.9));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .header-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            background: rgba(124, 118, 217, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(207, 223, 140, 0.385);
+            transform: translateY(-3px);
+        }
+        
+        .profile-section {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            width: 100%;
+        }
+        
+        .profile-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .profile-section p {
+            color: #555;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .resources-section {
+            padding: 2rem;
+            width: 100%;
+        }
+        
+        .resources-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .download-table {
+            width: 100%;
+            margin: 0 auto 1rem;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 0;
+            overflow: hidden;
+        }
+        
+        .download-table th {
+            background-color: #4fcf5e;
+            color: white;
+            font-weight: 600;
+            padding: 14px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        
+        .download-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        .download-table tr:hover {
+            background-color: #79d55590;
+        }
+        
+        .download-btn {
+            background: #df5a8fb0;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .download-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background: #7a5184;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            color: #e74c3c;
+        }
+        
+        .footer-contact {
+            text-align: right;
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.9rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-contact {
+                text-align: center;
+            }
+            
+            .download-table {
+                display: block;
+                font-size: 0.9rem;
+            }
+            .download-table th,
+            .download-table td {
+                padding: 8px 6px;
+    }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="logo">Sobrul's Stat Talk</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="statistics_jnu.html">Statistics JnU</a></li>
+                <li><a href="https://sobrul3.github.io/stat/">My Statistics</a></li>
+                <li><a href="about_me.html">About</a></li>
+            </ul>
+        </header>
+
+        <section class="profile-section">
+            <h2>Dr. Md. Giash Uddin </h2>
+            <p>Professor of Statistics at Jagannath University with extensive experience in statistical analysis, research methodology, and data science.</p>
+        </section>
+
+        <section class="resources-section">
+            <h2>Dataset Downloads</h2>
+            <table class="download-table">
+                <thead>
+                    <tr>
+                        <th>Dataset Name</th>
+                        <th>Download Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Child data.xlsx </td>
+                        <td><a href="assets/Giash Sir/Child data.xlsx" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td> d1.sav</td>
+                        <td><a href="assets/Giash Sir/d1.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td> d2.sav</td>
+                        <td><a href="assets/Giash Sir/d2.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td> d3.sav</td>
+                        <td><a href="assets/Giash Sir/d3.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Grades.sav</td>
+                        <td><a href="assets/Giash Sir/grades.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="statistics_jnu.html">My Statistics</a>
+                </div>
+                <div class="footer-contact">
+                    <p style="color: orange;">Email: sobrulss@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
