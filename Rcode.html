@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mohammad Sobrul - Rcod </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #766161;
+            background: #f8f9fa;
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(rgba(108, 181, 88, 0.9), rgba(219, 100, 197, 0.9));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            background: rgba(124, 118, 217, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(207, 223, 140, 0.385);
+            transform: translateY(-3px);
+        }
+        
+        .profile-section {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .profile-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .profile-section p {
+            color: #555;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        
+        .resources-section {
+            padding: 2rem;
+        }
+        
+        .resources-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .download-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            table-layout: fixed;
+        }
+        
+        .download-table th, 
+        .download-table td {
+            padding: 14px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            word-wrap: break-word;
+        }
+
+        .download-table th {
+            background-color: #4fcf5e;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .download-table tr:hover {
+            background-color: #79d55590;
+        }
+        
+        .download-btn {
+            background: #eed1dcb0;
+            color: rgb(63, 58, 58);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .download-btn:hover {
+            background: #f0a0d8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background: #7a5184;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            color: #e74c3c;
+        }
+        
+        .footer-contact {
+            text-align: right;
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.9rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-contact {
+                text-align: center;
+            }
+
+            .download-table th,
+            .download-table td {
+                padding: 10px 8px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="logo"><h6 style="color: #9902fe; -webkit-text-stroke: 0.5px rgb(2, 255, 251);">Sobrul's Stat Talk</h5>Statistics JnU</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://sobrul3.github.io/stat/">My Statistics</a></li>
+                <li><a href="about_me.html">About</a></li>
+            </ul>
+        </header>
+
+        <section class="profile-section">
+            <h2 style="text-align: center;"> Mohammad Sobrul</h2>
+            <p>Student of Statistics at Jagannath University with little experience in statistical analysis.<br> Hi! I am Sobrul Islam, a student of the Statistics Department at Jagannath University, Dhaka, Bangladesh. I am from Natore, Rajshahi. I love statistics and want to teach it in a simple and easy way so everyone can understand. My goal is to help students learn statistics without fear and make it interesting and practical....</p>
+        </section>
+
+        <section class="resources-section">
+            <h4 style="text-align: center;"> Here are all the files for Multivariate Analysis Lab, Econometrics Lab, and Epidemiology Lab. If you run them in RStudio, you will get the results. Some files contain solutions to more than one problem. </h4>
+            <table class="download-table">
+                <thead>
+                    <tr>
+                        <th>Dataset Name</th>
+                        <th>Download Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hotellings T-square.R</td>
+                        <td><a href="assets/RCODE/Hotellings T2.R" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                      <td>Skull Data.dat</td>
+                        <td><a href="assets/RCODE/T6-13.dat" download class="download-btn">Download</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Manova Skull Data.R</td>
+                        <td><a href="assets/RCODE/MANOVA Skull Data.R" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Manova Skull + Example-2.R</td>
+                        <td><a href="assets/RCODE/MANOVA Skull+Example-02.R" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Multivariate Regression Example.R</td>
+                        <td><a href="assets/RCODE/Multivariate Regression Example.R" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Multivariate Regression Sir.R</td>
+                        <td><a href="assets/RCODE/Multivariate Regression Sir.R" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Econometrics Lab.R</td>
+                        <td><a href="assets/RCODE/Econometrics all Lab math.R" download class="download-btn">Download</a></td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="statistics_jnu.html">My Statistics</a>
+                </div>
+                <div class="footer-contact">
+<p>For any queries : <a href="mailto:sobrulss@gmail.com" style="color: orange; text-decoration: none;">
+    sobrulss@gmail.com</a></p>                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
