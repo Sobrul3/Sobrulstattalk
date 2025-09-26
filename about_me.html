@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobrul's Stat Talk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: #2ecc71;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: #e74c3c;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .about-me {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        .personal-info h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            color: #e74c3c;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.4; /* Fixed line-height */
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Three columns for full width */
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            height: 100%;
+        }
+        
+        .info-item i {
+            color: #3498db;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-item strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .bio p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .stats-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #ecf0f1;
+        }
+        
+        .stats-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns for full width */
+            gap: 1rem;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .skills-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #ecf0f1;
+        }
+        
+        .skills-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .skill-category li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ecf0f1;
+            color: #555;
+        }
+        
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+        
+        .courses {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .courses h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .resources {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .resources h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+        
+        .resources ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .resources li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1;
+        }
+        
+        .resources li:before {
+            content: none;
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .social-platforms {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .social-platforms h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+        
+        .platform {
+            margin-bottom: 1.5rem;
+        }
+        
+        .platform h3 {
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #e74c3c;
+        }
+        
+        .footer-contact {
+            text-align: right;
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        ul[style*="disclosure-closed"] li:before {
+            content: none !important;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+                justify-content: center;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 0.8rem;
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                text-align: center;
+                padding: 12px;
+            }
+            
+            .about-me, .courses, .resources, .social-platforms, footer {
+                padding: 1.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            th, td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-contact {
+                text-align: center;
+            }
+            
+            header::before {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .about-me h2, .courses h2, .resources h2, .social-platforms h2 {
+                font-size: 1.3rem;
+            }
+            
+            .about-me, .courses, .resources, .social-platforms, footer {
+                padding: 1rem;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-chart-bar"></i>
+                <span>Sobrul's Stat Talk</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://sobrul3.github.io/sobrulstattalk/">Home</a></li>
+                <li><a href="https://sobrul3.github.io/sobrulstattalk/my_statistics.html">Statistics JnU</a></li>
+                <li><a href="#">My Statistics</a></li>
+                <li><a href="#" class="active">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="about-me">
+        <h2 style="font-family: 'Times New Roman', serif; color: #be2f2f;"> This is </h2>
+        <div class="about-content">
+            <div class="about-text">
+                <div class="personal-info">
+                    <h3 style="font-family: 'Times New Roman', serif;">Soburul Islam</h3>
+                    <p class="tagline">Statistics Learner || Statistics Lover</p>
+                    
+                    <div class="bio">
+                        <p>Hi! I am Sobrul Islam, a student of the Statistics Department at Jagannath University, Dhaka, Bangladesh. I am from Natore, Rajshahi. I love statistics and want to teach it in a simple and easy way so everyone can understand. My goal is to help students learn statistics without fear and make it interesting and practical.</p>
+                        
+                        <p>My journey in statistics began with a curiosity about data and patterns. Now, I'm dedicated to sharing my knowledge through simple explanations, practical examples, and engaging content that makes statistics accessible to all.</p>
+                        
+                        <p>Through Sobrul's Stat Talk, I aim to create a community where students can learn, ask questions, and develop confidence in statistical analysis.</p>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>Education</strong>
+                                <p>I started my primary education at 16th No. Brogaon Government High School, where I studied up to class five. After passing the final exam, I got admitted to Biash Batelian High School and completed both my JSC and SSC there. This was one of the happiest times of my life, full of good experiences and memories. Later, I studied at Singra Damdama Pilot High School and College, a well-known institution in that area, where I completed my HSC. Now, I am studying for a Bachelor of Science in Statistics at Jagannath University, Dhaka, with the aim of building a strong academic background and making a valuable contribution in the field of data and research.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Hometown</strong>
+                                <p>Singra-Natore, Rajshahi<br>Bangladesh</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <strong>Passion</strong>
+                                <p>Learning and Practicing Statistics<br>Making complex concepts into simple</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+        <div class="stats-section">
+                <h3>My Statistics Journey</h3>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years of Study</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Topics Covered</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">16+</div>
+                        <div class="stat-label">Students Helped</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Passion for Statistics</div>
+                    </div>
+                </div>
+        </div>   
+        <div class="skills-section">
+            <h3>Areas of Expertise</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Statistical Analysis</h4>
+                    <ul style="list-style-type: circle; padding-left: 20px;">
+                        <li>Probability Theory</li>
+                        <li>Time Series Analysis</li>
+                        <li>Hypothesis Testing</li>
+                        <li>Regression Analysis</li>
+                        <li>Multivariate Analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Software Proficiency</h4>
+                    <ul style="list-style-type: circle; padding-left: 20px;">
+                        <li>Excel</li>
+                        <li>C++</li>
+                        <li>R Programming</li>
+                        <li>SPSS</li>
+                        <li>STATA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-platforms">
+        <h2>Connect With Me</h2>
+        
+        <div class="platform">
+            <h3>YouTube</h3>
+            <p>Learn statistics the easy way! On Sobrul's Stat Talk, you'll find notes, video lessons, tips, and tricks to make studying simple and fun. You can visit my YouTube channel: <a href="https://www.youtube.com/@sobrulstattalk">Sobrul's Stat Talk</a></p>
+        </div>
+        
+        <div class="platform">
+            <h3>Facebook</h3>
+            <p>Sobrul's Stat Talk is here to help you learn! Get notes, tutorials, and study guides that make studying easier and enjoyable. You can visit my Facebook page: <a href="https://www.facebook.com/SobrulStatTalk">Sobrul's Stat Talk</a></p>
+        </div>
+        
+        <div class="platform">
+            <h3>Telegram</h3>
+            <p>Join Sobrul's Stat Talk on Telegram! Get instant access to notes, study materials, and educational updates to make learning easier. You can visit my Telegram channel: <a href="https://t.me/sobrulstattalk">Sobrul's Stat Talk</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://sobrul3.github.io/sobrulstattalk/">Home</a>
+                <a href="https://t.me/sobrulstattalk">Lecture Notes</a>
+                <a href="https://www.youtube.com/@sobrulstattalk">Video Lectures</a>
+            </div>
+            <div class="footer-contact">
+                <p style="color: orange;">Email: sobrulss@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
