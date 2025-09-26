@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobrul's Stat Talk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: #2ecc71;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: #e74c3c;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .intro h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .intro p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .courses {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .courses h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .resources {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .resources h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+        
+        .resources ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .resources li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1;
+        }
+        
+        .resources li:before {
+            content: none;
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .social-platforms {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .social-platforms h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+        
+        .platform {
+            margin-bottom: 1.5rem;
+        }
+        
+        .platform h3 {
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #e74c3c;
+        }
+        
+        .footer-contact {
+            text-align: right;
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Remove dots for disclosure-closed lists */
+        ul[style*="disclosure-closed"] li:before {
+            content: none !important;
+        }
+
+        /* Mobile Responsive Fixes */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+                justify-content: center;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 0.8rem;
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                text-align: center;
+                padding: 12px;
+            }
+            
+            .intro, .courses, .resources, .social-platforms, footer {
+                padding: 1.5rem;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            th, td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-contact {
+                text-align: center;
+            }
+            
+            /* Adjust header circle for mobile */
+            header::before {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .intro h2, .courses h2, .resources h2, .social-platforms h2 {
+                font-size: 1.3rem;
+            }
+            
+            .intro, .courses, .resources, .social-platforms, footer {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-chart-bar"></i>
+                <span>Sobrul's Stat Talk</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://sobrul3.github.io/sobrulstattalk/">Home</a></li>
+                <li><a href="#" class="active">Statistics JnU</a></li>
+                <li><a href="#">My Statistics</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="intro">
+        <h2> Statistics is the Grammar of Science </h2>
+        <p>Statistics is the science of collecting, analyzing, interpreting, and presenting data. It helps us understand patterns, make predictions, and make informed decisions in everyday life and across various fields such as science, business, health, and technology. By using statistical methods, we can summarize large amounts of information, identify trends, and test hypotheses. In short, statistics is an essential tool for research, problem-solving, and decision-making.</p>
+<p>I am Sobrul Islam, a student of the Statistics Department at Jagannath University, Dhaka, Bangladesh. I am from Natore, Rajshahi. I love statistics and want to teach it in a simple and easy way so everyone can understand. My goal is to help students learn statistics without fear and make it interesting and practical.</p>
+    </section>
+
+    <section class="courses">
+        <h2>Current Semester Courses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Notes</th>
+                    <th>Videos</th>
+                    <th>Practice</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Econometrics</td>
+                    <td><a href="https://t.me/sobrulstattalk">Telegram</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Bioinformatics</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Epidemiology</td>
+                    <td></td>
+                    <td><a href="https://www.youtube.com/@sobrulstattalk">YouTube</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Multivariate Analysis</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SPSS & STATA</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="https://www.facebook.com/SobrulStatTalk">Facebook</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="resources">
+        <h2>SPSS & STATA Data</h2>
+        <p>Here all are available for Practicing SPSS and STATA.</p>
+         <ul style="list-style-type: disclosure-closed; padding-left: 20px; font-size: 18px; color: orange; margin-top: 15px;">
+             <li><a href="downladatique.md" style="text-decoration: none;">Atique Sir</a></li>
+             <li><a href="downladagiash.md" style="text-decoration: none;">Giash Sir</a></li>
+             <li><a href="downladsobrul.md" style="text-decoration: none;">Sobrul</a></li>
+         </ul>
+        
+        <h2>R Code of 7th Semester Lab</h2>
+        <ul style="list-style-type: disclosure-closed; padding-left: 20px; font-size: 18px; color: orange; margin-top: 15px;">
+             <li><a href="Rcode.md" style="text-decoration: none;">R Code</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://sobrul3.github.io/sobrulstattalk/">Home</a>
+                <a href="https://t.me/sobrulstattalk">Lecture Notes</a>
+                <a href="https://www.youtube.com/@sobrulstattalk">Video Lectures</a>
+            </div>
+            <div class="footer-contact">
+                <p style="color: orange;">Email: sobrulss@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
