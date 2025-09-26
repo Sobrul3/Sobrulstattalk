@@ -1,42 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Md. Atiqul Islam - Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-image: url('https://th.bing.com/th/id/R.9e51ac4b5b1cb9a7d1385e7e8a5a8a69?rik=sS1vRFAHfCTJDg&riu=http%3a%2f%2fimages.clipartpanda.com%2fstatistics-clipart-statistics.png&ehk=bPtlKuqk3qH5P%2bt0YqB8lldmGgkpJvA815XTMtTTVtQ%3d&risl=&pid=ImgRaw&r=0');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        header {
+            background: linear-gradient(rgba(108, 181, 88, 0.9), rgba(219, 100, 197, 0.9));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .header-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            background: rgba(124, 118, 217, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(207, 223, 140, 0.385);
+            transform: translateY(-3px);
+        }
+        
+        .profile-section {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .profile-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .profile-section p {
+            color: #555;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .resources-section {
+            padding: 2rem;
+        }
+        
+        .resources-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .download-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .download-table th {
+            background-color: #4fcf5e;
+            color: white;
+            font-weight: 600;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .download-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        .download-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .download-btn {
+            background: #df5a8fb0;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .download-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background: #7a5184;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            color: #e74c3c;
+        }
+        
+        .footer-contact {
+            text-align: right;
+        }
+        
+        .copyright {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-contact {
+                text-align: center;
+            }
+            
+            .download-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="logo">Sobrul's Stat Talk</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="statistics_jnu.html">Statistics JnU</a></li>
+                <li><a href="https://sobrul3.github.io/stat/">My Statistics</a></li>
+                <li><a href="about_me.html">About</a></li>
+            </ul>
+        </header>
 
-<style>
-  .download-list {
-    list-style-type: square;
-    padding-left: 20px;
-    font-size: 18px;
-    color: #ff0000;
-    margin-top: 15px;
-  }
+        <section class="profile-section">
+            <h2>Dr. Md. Atiqul Islam</h2>
+            <p>Professor of Statistics at Jagannath University with extensive experience in statistical analysis, research methodology, and data science. This page contains datasets curated by Dr. Islam for educational and research purposes.</p>
+        </section>
 
-  .download-list a {
-    text-decoration: none;
-    color: #030350;
-  }
+        <section class="resources-section">
+            <h2>Dataset Downloads</h2>
+            <table class="download-table">
+                <thead>
+                    <tr>
+                        <th>Dataset Name</th>
+                        <th>Download Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Body Temperature.sav</td>
+                        <td><a href="assets/Atique Sir/Body-Temperature.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Exercise data.sav</td>
+                        <td><a href="assets/Atique Sir/Exercise_data.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Hypertension.sav</td>
+                        <td><a href="assets/Atique Sir/Hypertension.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ice cream.sav</td>
+                        <td><a href="assets/Atique Sir/Ice cream.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>LIFESPAN+DIET.sav</td>
+                        <td><a href="assets/Atique Sir/LIFESPAN+DIET.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>LIFESPAN.sav</td>
+                        <td><a href="assets/Atique Sir/LIFESPAN.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Obesity.dta</td>
+                        <td><a href="assets/Atique Sir/Obesity.dta" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Obesity.sas7bdat</td>
+                        <td><a href="assets/Atique Sir/Obesity.sas7bdat" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Pair t.sav</td>
+                        <td><a href="assets/Atique Sir/Pair t.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>dads.sav</td>
+                        <td><a href="assets/Atique Sir/dads.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>dat1.sav</td>
+                        <td><a href="assets/Atique Sir/dat1.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>dat2.sav</td>
+                        <td><a href="assets/Atique Sir/dat2.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>data1.sav</td>
+                        <td><a href="assets/Atique Sir/data1.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>data2.sav</td>
+                        <td><a href="assets/Atique Sir/data2.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>faminc.sav</td>
+                        <td><a href="assets/Atique Sir/faminc.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>kids.sav</td>
+                        <td><a href="assets/Atique Sir/kids.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>bodyfat.csv</td>
+                        <td><a href="assets/Atique Sir/bodyfat.csv" download class="download-btn">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sample_Dataset_2014.sav</td>
+                        <td><a href="assets/Atique Sir/Sample_Dataset_2014.sav" download class="download-btn">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-  .download-list a:hover {
-    text-decoration: underline;
-    color: darkblue;
-  }
-</style>
-
-<h2>Dr. Md. Atiqul Islam</h2>
-<ul class="download-list">
-       <li><a href="assets/Atique Sir/Body-Temperature.sav" download> Body Temperature.sav </a></li>
-       <li><a href="assets/Atique Sir/Exercise_data.sav" download> Exercise data.sav </a></li>
-       <li><a href="assets/Atique Sir/Hypertension.sav" download> Hypertension.sav </a></li>
-       <li><a href="assets/Atique Sir/Ice cream.sav" download> Ice cream.sav </a></li>
-       <li><a href="assets/Atique Sir/LIFESPAN+DIET.sav" download> LIFESPAN+DIET.sav </a></li>
-       <li><a href="assets/Atique Sir/LIFESPAN.sav" download> LIFESPAN.sav </a></li>
-       <li><a href="assets/Atique Sir/Obesity.dta" download> Obesity.dta </a></li>
-       <li><a href="assets/Atique Sir/Obesity.sas7bdat" download> Obesity.sas7bdat </a></li>
-       <li><a href="assets/Atique Sir/Pair t.sav" download> Pair t.sav </a></li>
-       <li><a href="assets/Atique Sir/dads.sav" download> dads.sav </a></li>
-       <li><a href="assets/Atique Sir/dat1.sav" download> dat1.sav </a></li>
-       <li><a href="assets/Atique Sir/dat2.sav" download> dat2.sav </a></li>
-       <li><a href="assets/Atique Sir/data1.sav" download> data1.sav </a></li>
-       <li><a href="assets/Atique Sir/data2.sav" download> data2.sav </a></li>
-       <li><a href="assets/Atique Sir/faminc.sav" download> faminc.sav </a></li>
-       <li><a href="assets/Atique Sir/kids.sav" download> kids.sav </a></li>
-       <li><a href="assets/Atique Sir/bodyfat.csv" download> bodyfat.csv </a></li>
-       <li><a href="assets/Atique Sir/Sample_Dataset_2014.sav" download> Sample_Dataset_2014.sav </a></li>
-</ul>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="statistics_jnu.html">My Statistics</a>
+                </div>
+                <div class="footer-contact">
+                    <p style="color: orange;">Email: sobrulss@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
