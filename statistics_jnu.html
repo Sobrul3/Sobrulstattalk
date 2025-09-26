@@ -105,6 +105,7 @@
         .intro p {
             margin-bottom: 1rem;
             line-height: 1.6;
+            text-align: justify;
         }
         
         .courses {
@@ -258,12 +259,10 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        /* Remove dots for disclosure-closed lists */
         ul[style*="disclosure-closed"] li:before {
             content: none !important;
         }
 
-        /* Mobile Responsive Fixes */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -322,7 +321,6 @@
                 text-align: center;
             }
             
-            /* Adjust header circle for mobile */
             header::before {
                 width: 80px;
                 height: 80px;
@@ -347,13 +345,14 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">
+             <div class="logo">
                 <i class="fas fa-chart-bar"></i>
-                <span>Sobrul's Stat Talk</span>
-            </div>
+                <span>Sobrul's Stat Talk</span>  
+             </div>
+
             <ul class="nav-links">
+                <li><h3 style="color: #89049b">Statistics JnU</h3></li>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#" class="active">Statistics JnU</a></li>
                 <li><a href="https://sobrul3.github.io/stat/">My Statistics</a></li>
                 <li><a href="about_me.html">About</a></li>
             </ul>
@@ -418,12 +417,12 @@
          <ul style="list-style-type: disclosure-closed; padding-left: 20px; font-size: 18px; color: orange; margin-top: 15px;">
              <li><a href="datique.html" style="text-decoration: none;">Atique Sir</a></li>
              <li><a href="dgiash.html" style="text-decoration: none;">Giash Sir</a></li>
-             <li><a href="dsobrul.md" style="text-decoration: none;">Sobrul</a></li>
+             <li><a href="dsobrul.html" style="text-decoration: none;">Sobrul</a></li>
          </ul>
         
         <h2>R Code of 7th Semester Lab</h2>
         <ul style="list-style-type: disclosure-closed; padding-left: 20px; font-size: 18px; color: orange; margin-top: 15px;">
-             <li><a href="dRcode.md" style="text-decoration: none;">R Code</a></li>
+             <li><a href="Rcode.html" style="text-decoration: none;">R Code</a></li>
         </ul>
     </section>
 
@@ -435,11 +434,12 @@
                 <a href="https://www.youtube.com/@sobrulstattalk">Video Lectures</a>
             </div>
             <div class="footer-contact">
-                <p style="color: orange;">Email: sobrulss@gmail.com</p>
+                <p>For any queries : <a href="mailto:sobrulss@gmail.com" style="color: orange; text-decoration: none;">
+    sobrulss@gmail.com</a></p>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved.</p>
+            <p>&copy; 2023 Sobrul's Stat Talk || All Rights Reserved</p>
         </div>
     </footer>
 </body>
